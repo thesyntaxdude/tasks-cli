@@ -1,6 +1,6 @@
 {
   "name": "tasks-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "simple tasks tracker to manage  projects in the terminal",
   "main": "index.js",
   "preferGlobal": true,
@@ -10,6 +10,7 @@
   "type": "module",
   "dependencies": {
     "@inquirer/prompts": "^8.7.2",
+    "cli-table3": "^0.6.5",
     "commander": "^15.0.0",
     "mongoose": "^9.10.2",
     "nanoid": "^6.0.1"

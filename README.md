@@ -178,7 +178,7 @@ tasks-cli --version
 tasks-cli -V
 ```
 
-The current version is `1.0.0`.
+The current version is `1.0.1`.
 
 ## Data storage
 
@@ -189,3 +189,7 @@ task contains:
 - `description`: the required task text
 - `status`: `ns`, `wip`, or `done`
 - `createdAt` and `updatedAt`: timestamps managed by Mongoose
+
+<br><br>
+
+> _project inspired by [roadmap.sh](https://roadmap.sh/projects/task-tracker)_
