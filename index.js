@@ -1,6 +1,7 @@
 import mongoose from "mongoose";
 import Tasks from "./models/tasks.js";
 import connectDB from "./config/connectDB.js";
+import renderTable from "./utils/render.js";
 
 await connectDB();
 
@@ -9,7 +10,7 @@ export const listAllTasks = async () => {
     const tasks = await Tasks.find().sort({ status: -1 }).lean();
     if (tasks.length) {
       console.info(`${tasks.length} total tasks`);
-      console.table(tasks, ["_id", "description", "status"]);
+      renderTable(tasks);
     } else {
       console.info(`No tasks yet. Add some tasks to get started.`);
     }
@@ -26,7 +27,7 @@ export const listFinishedTasks = async () => {
       .lean();
     if (tasks.length) {
       console.info(`${tasks.length} total tasks`);
-      console.table(tasks, ["_id", "description", "status"]);
+      renderTable(tasks);
     } else {
       console.info(
         `No completed tasks yet. Mark some tasks as completed to show them here.`,
@@ -45,7 +46,7 @@ export const listUntouchedTasks = async () => {
       .lean();
     if (tasks.length) {
       console.info(`${tasks.length} total tasks`);
-      console.table(tasks, ["_id", "description", "status"]);
+      renderTable(tasks);
     } else {
       console.info(
         `No unfinished tasks yet. Mark some tasks as unfinished to show them here.`,
@@ -64,7 +65,7 @@ export const listWipTasks = async () => {
       .lean();
     if (tasks.length) {
       console.info(`${tasks.length} total tasks`);
-      console.table(tasks, ["_id", "description", "status"]);
+      renderTable(tasks);
     } else {
       console.info(
         `No work-in-progrss tasks yet. Mark some tasks as work-in-progress to show them here.`,
