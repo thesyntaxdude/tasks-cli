@@ -189,3 +189,7 @@ task contains:
 - `description`: the required task text
 - `status`: `ns`, `wip`, or `done`
 - `createdAt` and `updatedAt`: timestamps managed by Mongoose
+
+<br><br>
+
+> _project inspired by [roadmap.sh](https://roadmap.sh/projects/task-tracker)_
