@@ -104,7 +104,7 @@ export const removeTask = async (id) => {
 export const updateTask = async (id, task) => {
   try {
     const oldTask = await Tasks.findOne({ _id: id });
-    if (!oldTaskb) {
+    if (!oldTask) {
       console.info(`The task with id ${id} was not found`);
     } else {
       await Tasks.updateOne({ _id: id }, task);
