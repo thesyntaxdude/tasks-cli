@@ -178,7 +178,7 @@ tasks-cli --version
 tasks-cli -V
 ```
 
-The current version is `1.0.0`.
+The current version is `1.0.1`.
 
 ## Data storage
 
