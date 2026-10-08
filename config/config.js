@@ -1,5 +1,5 @@
 import path from "node:path";
-import { loadEnvFile } from "node:process";
+import { loadEnvFile, process } from "node:process";
 
 loadEnvFile(path.join(import.meta.dirname, "..", ".env"));
 
